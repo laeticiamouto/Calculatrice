@@ -1,0 +1,10 @@
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\bin\Debug\Calculatrice.exe.config
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\bin\Debug\Calculatrice.exe
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\bin\Debug\Calculatrice.pdb
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.csproj.AssemblyReference.cache
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.Properties.Resources.resources
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.csproj.GenerateResource.cache
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.exe
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.pdb
+C:\Users\laeti\Documents\GeraldGodin\prog base\Calculatrice\Calculatrice\obj\Debug\Calculatrice.F_Calculatrice.resources
