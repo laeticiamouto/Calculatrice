@@ -14,6 +14,8 @@ namespace Calculatrice
     {
         bool isOperation = false;
         string operation = "";
+        double nbr1 = 0;
+        double nbr2 = 0;
         public F_Calculatrice()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace Calculatrice
         {
             if(double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "1";
                 }
@@ -58,7 +60,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "2";
                 }
@@ -85,7 +87,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "3";
                 }
@@ -112,7 +114,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "4";
                 }
@@ -139,7 +141,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "5";
                 }
@@ -166,7 +168,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "6";
                 }
@@ -193,7 +195,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "7";
                 }
@@ -219,7 +221,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "8";
                 }
@@ -246,7 +248,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "9";
                 } else
@@ -283,7 +285,7 @@ namespace Calculatrice
                 }
             } else
             {
-                if (lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "0";
                 }
@@ -311,9 +313,10 @@ namespace Calculatrice
                     lbl_Ecran.Text = ((1 / value).ToString());
                 } else
                 {
-                    if (isOperation)
+                    if (operation != "")
                     {
-
+                        lbl_Operation.Text += " 1 / (" + value + ")";
+                        lbl_Ecran.Text = ((1 / value).ToString());
                     }
                 }
             }
@@ -329,6 +332,34 @@ namespace Calculatrice
         private void btn_Virgule_Click(object sender, EventArgs e)
         {
             lbl_Ecran.Text = lbl_Ecran.Text + ',';
+        }
+
+        private void btn_Division_Click(object sender, EventArgs e)
+        {
+            lbl_Operation.Text += " " + lbl_Ecran.Text + " / ";
+            isOperation = true;
+            operation = "/";
+        }
+
+        private void btn_Multiplication_Click(object sender, EventArgs e)
+        {
+            lbl_Operation.Text += " " + lbl_Ecran.Text + " * ";
+            isOperation = true;
+            operation = "*";
+        }
+
+        private void btn_Moins_Click(object sender, EventArgs e)
+        {
+            lbl_Operation.Text += " " + lbl_Ecran.Text + " - ";
+            isOperation = true;
+            operation = "-";
+        }
+
+        private void btn_Plus_Click(object sender, EventArgs e)
+        {
+            lbl_Operation.Text += " " + lbl_Ecran.Text + " + ";
+            isOperation = true;
+            operation = "+";
         }
     }
 }

@@ -130,6 +130,7 @@
             this.btn_Division.TabIndex = 4;
             this.btn_Division.Text = "÷";
             this.btn_Division.UseVisualStyleBackColor = false;
+            this.btn_Division.Click += new System.EventHandler(this.btn_Division_Click);
             // 
             // btn_Multiplication
             // 
@@ -147,6 +148,7 @@
             this.btn_Multiplication.TabIndex = 8;
             this.btn_Multiplication.Text = "×";
             this.btn_Multiplication.UseVisualStyleBackColor = false;
+            this.btn_Multiplication.Click += new System.EventHandler(this.btn_Multiplication_Click);
             // 
             // btn_Neuf
             // 
@@ -218,6 +220,7 @@
             this.btn_Moins.TabIndex = 12;
             this.btn_Moins.Text = "-";
             this.btn_Moins.UseVisualStyleBackColor = false;
+            this.btn_Moins.Click += new System.EventHandler(this.btn_Moins_Click);
             // 
             // btn_Six
             // 
@@ -289,6 +292,7 @@
             this.btn_Plus.TabIndex = 16;
             this.btn_Plus.Text = "+";
             this.btn_Plus.UseVisualStyleBackColor = false;
+            this.btn_Plus.Click += new System.EventHandler(this.btn_Plus_Click);
             // 
             // btn_Trois
             // 
