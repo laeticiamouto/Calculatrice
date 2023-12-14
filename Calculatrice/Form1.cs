@@ -16,6 +16,7 @@ namespace Calculatrice
         string operation = "";
         double nbr1 = 0;
         double nbr2 = 0;
+        double result = 0;
         public F_Calculatrice()
         {
             InitializeComponent();
@@ -27,13 +28,14 @@ namespace Calculatrice
             lbl_Operation.Text = "";
             isOperation = false;
             operation = "";
+            nbr1 = 0; nbr2 = 0; result = 0;
         }
 
         private void btn_Un_Click(object sender, EventArgs e)
         {
             if(double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "1";
                 }
@@ -60,7 +62,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "2";
                 }
@@ -87,7 +89,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "3";
                 }
@@ -114,7 +116,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "4";
                 }
@@ -141,7 +143,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "5";
                 }
@@ -168,7 +170,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "6";
                 }
@@ -195,7 +197,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "7";
                 }
@@ -221,7 +223,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "8";
                 }
@@ -248,7 +250,7 @@ namespace Calculatrice
         {
             if (double.Parse(lbl_Ecran.Text) == 0)
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "9";
                 } else
@@ -285,7 +287,7 @@ namespace Calculatrice
                 }
             } else
             {
-                if (lbl_Ecran.Text.Length>2 && lbl_Ecran.Text.Substring(0,2) == "0,")
+                if (lbl_Ecran.Text.Length>=2 && lbl_Ecran.Text.Substring(0,2) == "0,")
                 {
                     lbl_Ecran.Text += "0";
                 }
@@ -310,13 +312,21 @@ namespace Calculatrice
                 if (lbl_Operation.Text == "")
                 {
                     lbl_Operation.Text = " 1 / (" + value + ")";
-                    lbl_Ecran.Text = ((1 / value).ToString());
+                    double r = 1 / value;
+                    nbr1 = r;
+                    lbl_Ecran.Text = r.ToString();
                 } else
                 {
-                    if (operation != "")
+                    if (operation != "" && !lbl_Operation.Text.Contains("="))
                     {
                         lbl_Operation.Text += " 1 / (" + value + ")";
                         lbl_Ecran.Text = ((1 / value).ToString());
+                    } else if (lbl_Operation.Text.Contains("="))
+                    {
+                        lbl_Operation.Text = " 1 / (" + value + ")";
+                        double r = 1 / value;
+                        nbr1 = r;
+                        lbl_Ecran.Text = r.ToString();
                     }
                 }
             }
@@ -324,7 +334,35 @@ namespace Calculatrice
 
         private void btn_Modulo_Click(object sender, EventArgs e)
         {
-            lbl_Operation.Text += " "+ lbl_Ecran.Text + " % ";
+            if (lbl_Operation.Text == "")
+            {
+                lbl_Operation.Text = " " + lbl_Ecran.Text + " % ";
+                nbr1 = double.Parse(lbl_Ecran.Text);
+            }
+            else
+            {
+                if (!lbl_Operation.Text.Contains("="))
+                {
+                    if (operation != "")
+                    {
+                        nbr2 = double.Parse(lbl_Ecran.Text);
+                        result = calculate(nbr1, nbr2, operation);
+                        lbl_Operation.Text = " " + result.ToString() + " % ";
+                        lbl_Ecran.Text = result.ToString();
+                        nbr1 = result;
+                    }
+                    else
+                    {
+                        lbl_Operation.Text += " % ";
+                        nbr1 = double.Parse(lbl_Ecran.Text);
+                    }
+                }
+                else
+                {
+                    lbl_Operation.Text = " " + lbl_Ecran.Text + " % ";
+                    nbr1 = double.Parse(lbl_Ecran.Text);
+                }
+            }
             isOperation = true;
             operation = "%";
         }
@@ -336,30 +374,233 @@ namespace Calculatrice
 
         private void btn_Division_Click(object sender, EventArgs e)
         {
-            lbl_Operation.Text += " " + lbl_Ecran.Text + " / ";
+            if (lbl_Operation.Text == "")
+            {
+                lbl_Operation.Text = " " + lbl_Ecran.Text + " / ";
+                nbr1 = double.Parse(lbl_Ecran.Text);
+            }
+            else
+            {
+                if (!lbl_Operation.Text.Contains("="))
+                {
+                    if (operation != "")
+                    {
+                        nbr2 = double.Parse(lbl_Ecran.Text);
+                        result = calculate(nbr1, nbr2, operation);
+                        lbl_Operation.Text = " " + result.ToString() + " / ";
+                        lbl_Ecran.Text = result.ToString();
+                        nbr1 = result;
+                    }
+                    else
+                    {
+                        lbl_Operation.Text += " / ";
+                        nbr1 = double.Parse(lbl_Ecran.Text);
+                    }
+                }
+                else
+                {
+                    lbl_Operation.Text = " " + lbl_Ecran.Text + " / ";
+                    nbr1 = double.Parse(lbl_Ecran.Text);
+                }
+
+            }
             isOperation = true;
             operation = "/";
         }
 
         private void btn_Multiplication_Click(object sender, EventArgs e)
         {
-            lbl_Operation.Text += " " + lbl_Ecran.Text + " * ";
+            if (lbl_Operation.Text == "")
+            {
+                lbl_Operation.Text = " " + lbl_Ecran.Text + " * ";
+                nbr1 = double.Parse(lbl_Ecran.Text);
+            }
+            else
+            {
+                if (!lbl_Operation.Text.Contains("="))
+                {
+                    if (operation != "")
+                    {
+                        nbr2 = double.Parse(lbl_Ecran.Text);
+                        result = calculate(nbr1, nbr2, operation);
+                        lbl_Operation.Text = " " + result.ToString() + " * ";
+                        lbl_Ecran.Text = result.ToString();
+                        nbr1 = result;
+                    }
+                    else
+                    {
+                        lbl_Operation.Text += " * ";
+                        nbr1 = double.Parse(lbl_Ecran.Text);
+                    }
+                }
+                else
+                {
+                    lbl_Operation.Text = " " + lbl_Ecran.Text + " * ";
+                    nbr1 = double.Parse(lbl_Ecran.Text);
+                }
+            }
             isOperation = true;
             operation = "*";
         }
 
         private void btn_Moins_Click(object sender, EventArgs e)
         {
-            lbl_Operation.Text += " " + lbl_Ecran.Text + " - ";
+            if (lbl_Operation.Text == "")
+            {
+                lbl_Operation.Text = " " + lbl_Ecran.Text + " - ";
+                nbr1 = double.Parse(lbl_Ecran.Text);
+            }
+            else
+            {
+                if (!lbl_Operation.Text.Contains("="))
+                {
+                    if (operation != "")
+                    {
+                        nbr2 = double.Parse(lbl_Ecran.Text);
+                        result = calculate(nbr1, nbr2, operation);
+                        lbl_Operation.Text = " " + result.ToString() + " - ";
+                        lbl_Ecran.Text = result.ToString();
+                        nbr1 = result;
+                    }
+                    else
+                    {
+                        lbl_Operation.Text += " - ";
+                        nbr1 = double.Parse(lbl_Ecran.Text);
+                    }
+                } else
+                {
+                    lbl_Operation.Text = " " + lbl_Ecran.Text + " - ";
+                    nbr1 = double.Parse(lbl_Ecran.Text);
+                }              
+            }
             isOperation = true;
             operation = "-";
         }
 
         private void btn_Plus_Click(object sender, EventArgs e)
         {
-            lbl_Operation.Text += " " + lbl_Ecran.Text + " + ";
+            if(lbl_Operation.Text == "")
+            {
+                lbl_Operation.Text = " " + lbl_Ecran.Text + " + ";
+                nbr1 = double.Parse(lbl_Ecran.Text);
+            } else
+            {
+                if (!lbl_Operation.Text.Contains("="))
+                {
+                    if (operation != "")
+                    {
+                        nbr2 = double.Parse(lbl_Ecran.Text);
+                        result = calculate(nbr1, nbr2, operation);
+                        lbl_Operation.Text = " " + result.ToString() + " + ";
+                        lbl_Ecran.Text = result.ToString();
+                        nbr1 = result;
+                    }
+                    else
+                    {
+                        lbl_Operation.Text += " + ";
+                        nbr1 = double.Parse(lbl_Ecran.Text);
+                    }
+                }
+                else
+                {
+                    lbl_Operation.Text = " " + lbl_Ecran.Text + " + ";
+                    nbr1 = double.Parse(lbl_Ecran.Text);
+                }
+            }
             isOperation = true;
             operation = "+";
+        }
+
+        private double calculate(double nb1, double nb2, string op)
+        { 
+            switch (op)
+            {
+                case "+": return nb1 + nb2;
+                case "-": return nb1 - nb2;
+                case "*": return nb1 * nb2;
+                case "/": return nb1 / nb2;
+                case "%": return nb1 % nb2;
+                default: break;
+            }
+            return double.NaN;
+        }
+
+        private void btn_Egal_Click(object sender, EventArgs e)
+        {
+            if(lbl_Operation.Text != "")
+            {
+                if (operation != "")
+                {
+                    nbr2 = double.Parse(lbl_Ecran.Text);
+                    result = calculate(nbr1, nbr2, operation);
+                    lbl_Operation.Text = nbr1.ToString() + " " + operation + " " + nbr2.ToString() + " = ";
+                    lbl_Ecran.Text = result.ToString();
+                }
+            }
+        }
+
+        private int CalculerFactoriel(int nb)
+        {
+            if (nb < 0)
+            {
+                return -1;
+            }
+
+            if (nb == 0 || nb == 1)
+            {
+                return 1;
+            }
+
+            int resultat = 1;
+            for (int i = 2; i <= nb; i++)
+            {
+                resultat *= i;
+            }
+
+            return resultat;
+        }
+
+        private void btn_Factoriel_Click(object sender, EventArgs e)
+        {
+            int value = 0;
+            try
+            {
+                value = int.Parse(lbl_Ecran.Text);
+            } catch
+            {
+                value = (int) double.Parse(lbl_Ecran.Text);
+            }
+            
+            int nb = CalculerFactoriel(value);
+            if (nb == -1)
+            {
+                lbl_Operation.Text = " fact(" + value + ")";
+                lbl_Ecran.Text = "Calcul du factoriel impossible";
+                lbl_Ecran.Font = new Font("Calibri", 13);
+            }
+            else
+            {
+                lbl_Ecran.Font = new Font("Calibri", 20);
+                if (lbl_Operation.Text == "")
+                {
+                    lbl_Operation.Text = " fact(" + value + ") ";
+                    nbr1 = nb;
+                    lbl_Ecran.Text = nb.ToString();
+                }
+                else
+                {
+                    if (operation != "" && !lbl_Operation.Text.Contains("="))
+                    {
+                        lbl_Operation.Text += " fact(" + value + ") ";
+                        lbl_Ecran.Text = nb.ToString();
+                    } else if (lbl_Operation.Text.Contains("="))
+                    {
+                        lbl_Operation.Text = " fact(" + value + ") ";
+                        nbr1 = nb;
+                        lbl_Ecran.Text = nb.ToString();
+                    }
+                }
+            }
         }
     }
 }

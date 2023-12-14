@@ -58,10 +58,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Ecran.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Ecran.Location = new System.Drawing.Point(0, 35);
-            this.lbl_Ecran.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Ecran.Location = new System.Drawing.Point(0, 43);
             this.lbl_Ecran.Name = "lbl_Ecran";
-            this.lbl_Ecran.Size = new System.Drawing.Size(239, 50);
+            this.lbl_Ecran.Size = new System.Drawing.Size(319, 62);
             this.lbl_Ecran.TabIndex = 0;
             this.lbl_Ecran.Text = "0";
             this.lbl_Ecran.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -74,10 +73,10 @@
             this.btn_Inverse.FlatAppearance.BorderSize = 0;
             this.btn_Inverse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Inverse.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Inverse.Location = new System.Drawing.Point(2, 93);
-            this.btn_Inverse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Inverse.Location = new System.Drawing.Point(3, 114);
+            this.btn_Inverse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Inverse.Name = "btn_Inverse";
-            this.btn_Inverse.Size = new System.Drawing.Size(55, 38);
+            this.btn_Inverse.Size = new System.Drawing.Size(73, 47);
             this.btn_Inverse.TabIndex = 1;
             this.btn_Inverse.Text = "⅟x";
             this.btn_Inverse.UseVisualStyleBackColor = false;
@@ -91,10 +90,10 @@
             this.btn_Modulo.FlatAppearance.BorderSize = 0;
             this.btn_Modulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modulo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modulo.Location = new System.Drawing.Point(62, 93);
-            this.btn_Modulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Modulo.Location = new System.Drawing.Point(83, 114);
+            this.btn_Modulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Modulo.Name = "btn_Modulo";
-            this.btn_Modulo.Size = new System.Drawing.Size(55, 38);
+            this.btn_Modulo.Size = new System.Drawing.Size(73, 47);
             this.btn_Modulo.TabIndex = 2;
             this.btn_Modulo.Text = "%";
             this.btn_Modulo.UseVisualStyleBackColor = false;
@@ -108,13 +107,14 @@
             this.btn_Factoriel.FlatAppearance.BorderSize = 0;
             this.btn_Factoriel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Factoriel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Factoriel.Location = new System.Drawing.Point(121, 93);
-            this.btn_Factoriel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Factoriel.Location = new System.Drawing.Point(161, 114);
+            this.btn_Factoriel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Factoriel.Name = "btn_Factoriel";
-            this.btn_Factoriel.Size = new System.Drawing.Size(55, 38);
+            this.btn_Factoriel.Size = new System.Drawing.Size(73, 47);
             this.btn_Factoriel.TabIndex = 3;
             this.btn_Factoriel.Text = "n!";
             this.btn_Factoriel.UseVisualStyleBackColor = false;
+            this.btn_Factoriel.Click += new System.EventHandler(this.btn_Factoriel_Click);
             // 
             // btn_Division
             // 
@@ -123,10 +123,10 @@
             this.btn_Division.FlatAppearance.BorderSize = 0;
             this.btn_Division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Division.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Division.Location = new System.Drawing.Point(180, 93);
-            this.btn_Division.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Division.Location = new System.Drawing.Point(240, 114);
+            this.btn_Division.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Division.Name = "btn_Division";
-            this.btn_Division.Size = new System.Drawing.Size(55, 38);
+            this.btn_Division.Size = new System.Drawing.Size(73, 47);
             this.btn_Division.TabIndex = 4;
             this.btn_Division.Text = "÷";
             this.btn_Division.UseVisualStyleBackColor = false;
@@ -141,10 +141,10 @@
             this.btn_Multiplication.FlatAppearance.BorderSize = 0;
             this.btn_Multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Multiplication.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Multiplication.Location = new System.Drawing.Point(180, 136);
-            this.btn_Multiplication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Multiplication.Location = new System.Drawing.Point(240, 167);
+            this.btn_Multiplication.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Multiplication.Name = "btn_Multiplication";
-            this.btn_Multiplication.Size = new System.Drawing.Size(55, 38);
+            this.btn_Multiplication.Size = new System.Drawing.Size(73, 47);
             this.btn_Multiplication.TabIndex = 8;
             this.btn_Multiplication.Text = "×";
             this.btn_Multiplication.UseVisualStyleBackColor = false;
@@ -159,10 +159,10 @@
             this.btn_Neuf.FlatAppearance.BorderSize = 0;
             this.btn_Neuf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Neuf.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Neuf.Location = new System.Drawing.Point(121, 136);
-            this.btn_Neuf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Neuf.Location = new System.Drawing.Point(161, 167);
+            this.btn_Neuf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Neuf.Name = "btn_Neuf";
-            this.btn_Neuf.Size = new System.Drawing.Size(55, 38);
+            this.btn_Neuf.Size = new System.Drawing.Size(73, 47);
             this.btn_Neuf.TabIndex = 7;
             this.btn_Neuf.Text = "9";
             this.btn_Neuf.UseVisualStyleBackColor = false;
@@ -177,10 +177,10 @@
             this.btn_Huit.FlatAppearance.BorderSize = 0;
             this.btn_Huit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Huit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huit.Location = new System.Drawing.Point(62, 136);
-            this.btn_Huit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Huit.Location = new System.Drawing.Point(83, 167);
+            this.btn_Huit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Huit.Name = "btn_Huit";
-            this.btn_Huit.Size = new System.Drawing.Size(55, 38);
+            this.btn_Huit.Size = new System.Drawing.Size(73, 47);
             this.btn_Huit.TabIndex = 6;
             this.btn_Huit.Text = "8";
             this.btn_Huit.UseVisualStyleBackColor = false;
@@ -195,10 +195,10 @@
             this.btn_Sept.FlatAppearance.BorderSize = 0;
             this.btn_Sept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sept.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sept.Location = new System.Drawing.Point(2, 136);
-            this.btn_Sept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Sept.Location = new System.Drawing.Point(3, 167);
+            this.btn_Sept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Sept.Name = "btn_Sept";
-            this.btn_Sept.Size = new System.Drawing.Size(55, 38);
+            this.btn_Sept.Size = new System.Drawing.Size(73, 47);
             this.btn_Sept.TabIndex = 5;
             this.btn_Sept.Text = "7";
             this.btn_Sept.UseVisualStyleBackColor = false;
@@ -213,10 +213,10 @@
             this.btn_Moins.FlatAppearance.BorderSize = 0;
             this.btn_Moins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Moins.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Moins.Location = new System.Drawing.Point(180, 179);
-            this.btn_Moins.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Moins.Location = new System.Drawing.Point(240, 220);
+            this.btn_Moins.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Moins.Name = "btn_Moins";
-            this.btn_Moins.Size = new System.Drawing.Size(55, 38);
+            this.btn_Moins.Size = new System.Drawing.Size(73, 47);
             this.btn_Moins.TabIndex = 12;
             this.btn_Moins.Text = "-";
             this.btn_Moins.UseVisualStyleBackColor = false;
@@ -231,10 +231,10 @@
             this.btn_Six.FlatAppearance.BorderSize = 0;
             this.btn_Six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Six.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Six.Location = new System.Drawing.Point(121, 179);
-            this.btn_Six.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Six.Location = new System.Drawing.Point(161, 220);
+            this.btn_Six.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Six.Name = "btn_Six";
-            this.btn_Six.Size = new System.Drawing.Size(55, 38);
+            this.btn_Six.Size = new System.Drawing.Size(73, 47);
             this.btn_Six.TabIndex = 11;
             this.btn_Six.Text = "6";
             this.btn_Six.UseVisualStyleBackColor = false;
@@ -249,10 +249,10 @@
             this.btn_Cinq.FlatAppearance.BorderSize = 0;
             this.btn_Cinq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cinq.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cinq.Location = new System.Drawing.Point(62, 179);
-            this.btn_Cinq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cinq.Location = new System.Drawing.Point(83, 220);
+            this.btn_Cinq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cinq.Name = "btn_Cinq";
-            this.btn_Cinq.Size = new System.Drawing.Size(55, 38);
+            this.btn_Cinq.Size = new System.Drawing.Size(73, 47);
             this.btn_Cinq.TabIndex = 10;
             this.btn_Cinq.Text = "5";
             this.btn_Cinq.UseVisualStyleBackColor = false;
@@ -267,10 +267,10 @@
             this.btn_Quatre.FlatAppearance.BorderSize = 0;
             this.btn_Quatre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quatre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quatre.Location = new System.Drawing.Point(2, 179);
-            this.btn_Quatre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Quatre.Location = new System.Drawing.Point(3, 220);
+            this.btn_Quatre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Quatre.Name = "btn_Quatre";
-            this.btn_Quatre.Size = new System.Drawing.Size(55, 38);
+            this.btn_Quatre.Size = new System.Drawing.Size(73, 47);
             this.btn_Quatre.TabIndex = 9;
             this.btn_Quatre.Text = "4";
             this.btn_Quatre.UseVisualStyleBackColor = false;
@@ -285,10 +285,10 @@
             this.btn_Plus.FlatAppearance.BorderSize = 0;
             this.btn_Plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Plus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Plus.Location = new System.Drawing.Point(180, 222);
-            this.btn_Plus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Plus.Location = new System.Drawing.Point(240, 273);
+            this.btn_Plus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Plus.Name = "btn_Plus";
-            this.btn_Plus.Size = new System.Drawing.Size(55, 38);
+            this.btn_Plus.Size = new System.Drawing.Size(73, 47);
             this.btn_Plus.TabIndex = 16;
             this.btn_Plus.Text = "+";
             this.btn_Plus.UseVisualStyleBackColor = false;
@@ -303,10 +303,10 @@
             this.btn_Trois.FlatAppearance.BorderSize = 0;
             this.btn_Trois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Trois.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Trois.Location = new System.Drawing.Point(121, 222);
-            this.btn_Trois.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Trois.Location = new System.Drawing.Point(161, 273);
+            this.btn_Trois.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Trois.Name = "btn_Trois";
-            this.btn_Trois.Size = new System.Drawing.Size(55, 38);
+            this.btn_Trois.Size = new System.Drawing.Size(73, 47);
             this.btn_Trois.TabIndex = 15;
             this.btn_Trois.Text = "3";
             this.btn_Trois.UseVisualStyleBackColor = false;
@@ -321,10 +321,10 @@
             this.btn_Deux.FlatAppearance.BorderSize = 0;
             this.btn_Deux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Deux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Deux.Location = new System.Drawing.Point(62, 222);
-            this.btn_Deux.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Deux.Location = new System.Drawing.Point(83, 273);
+            this.btn_Deux.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Deux.Name = "btn_Deux";
-            this.btn_Deux.Size = new System.Drawing.Size(55, 38);
+            this.btn_Deux.Size = new System.Drawing.Size(73, 47);
             this.btn_Deux.TabIndex = 14;
             this.btn_Deux.Text = "2";
             this.btn_Deux.UseVisualStyleBackColor = false;
@@ -339,10 +339,10 @@
             this.btn_Un.FlatAppearance.BorderSize = 0;
             this.btn_Un.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Un.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Un.Location = new System.Drawing.Point(2, 222);
-            this.btn_Un.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Un.Location = new System.Drawing.Point(3, 273);
+            this.btn_Un.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Un.Name = "btn_Un";
-            this.btn_Un.Size = new System.Drawing.Size(55, 38);
+            this.btn_Un.Size = new System.Drawing.Size(73, 47);
             this.btn_Un.TabIndex = 13;
             this.btn_Un.Text = "1";
             this.btn_Un.UseVisualStyleBackColor = false;
@@ -357,10 +357,10 @@
             this.btn_Effacer.FlatAppearance.BorderSize = 0;
             this.btn_Effacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Effacer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Effacer.Location = new System.Drawing.Point(180, 265);
-            this.btn_Effacer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Effacer.Location = new System.Drawing.Point(240, 326);
+            this.btn_Effacer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Effacer.Name = "btn_Effacer";
-            this.btn_Effacer.Size = new System.Drawing.Size(55, 38);
+            this.btn_Effacer.Size = new System.Drawing.Size(73, 47);
             this.btn_Effacer.TabIndex = 20;
             this.btn_Effacer.Text = "c";
             this.btn_Effacer.UseVisualStyleBackColor = false;
@@ -375,10 +375,10 @@
             this.btn_Zero.FlatAppearance.BorderSize = 0;
             this.btn_Zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Zero.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Zero.Location = new System.Drawing.Point(121, 265);
-            this.btn_Zero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Zero.Location = new System.Drawing.Point(161, 326);
+            this.btn_Zero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Zero.Name = "btn_Zero";
-            this.btn_Zero.Size = new System.Drawing.Size(55, 38);
+            this.btn_Zero.Size = new System.Drawing.Size(73, 47);
             this.btn_Zero.TabIndex = 19;
             this.btn_Zero.Text = "0";
             this.btn_Zero.UseVisualStyleBackColor = false;
@@ -393,10 +393,10 @@
             this.btn_Virgule.FlatAppearance.BorderSize = 0;
             this.btn_Virgule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Virgule.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Virgule.Location = new System.Drawing.Point(62, 265);
-            this.btn_Virgule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Virgule.Location = new System.Drawing.Point(83, 326);
+            this.btn_Virgule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Virgule.Name = "btn_Virgule";
-            this.btn_Virgule.Size = new System.Drawing.Size(55, 38);
+            this.btn_Virgule.Size = new System.Drawing.Size(73, 47);
             this.btn_Virgule.TabIndex = 18;
             this.btn_Virgule.Text = ".";
             this.btn_Virgule.UseVisualStyleBackColor = false;
@@ -411,32 +411,32 @@
             this.btn_Egal.FlatAppearance.BorderSize = 0;
             this.btn_Egal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Egal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Egal.Location = new System.Drawing.Point(2, 265);
-            this.btn_Egal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Egal.Location = new System.Drawing.Point(3, 326);
+            this.btn_Egal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Egal.Name = "btn_Egal";
-            this.btn_Egal.Size = new System.Drawing.Size(55, 38);
+            this.btn_Egal.Size = new System.Drawing.Size(73, 47);
             this.btn_Egal.TabIndex = 17;
             this.btn_Egal.Text = "=";
             this.btn_Egal.UseVisualStyleBackColor = false;
+            this.btn_Egal.Click += new System.EventHandler(this.btn_Egal_Click);
             // 
             // lbl_Operation
             // 
             this.lbl_Operation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Operation.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Operation.Location = new System.Drawing.Point(-2, 7);
-            this.lbl_Operation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Operation.Location = new System.Drawing.Point(-3, 9);
             this.lbl_Operation.Name = "lbl_Operation";
-            this.lbl_Operation.Size = new System.Drawing.Size(237, 27);
+            this.lbl_Operation.Size = new System.Drawing.Size(316, 33);
             this.lbl_Operation.TabIndex = 21;
             this.lbl_Operation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // F_Calculatrice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(238, 308);
+            this.ClientSize = new System.Drawing.Size(317, 379);
             this.Controls.Add(this.lbl_Operation);
             this.Controls.Add(this.btn_Effacer);
             this.Controls.Add(this.btn_Zero);
@@ -459,7 +459,7 @@
             this.Controls.Add(this.btn_Modulo);
             this.Controls.Add(this.btn_Inverse);
             this.Controls.Add(this.lbl_Ecran);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "F_Calculatrice";
             this.Text = "Calculatrice";
             this.ResumeLayout(false);
